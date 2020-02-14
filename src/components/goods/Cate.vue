@@ -79,12 +79,12 @@
         <el-form-item label="父级分类：">
           <el-cascader
             v-model="selectedKeys"
-            expand-trigger="hover"
+            props.expandTrigger="hover"
             :options="parentCateList"
             :props="cascaderProps"
             @change="parentCateChanged"
             clearable
-            change-on-select
+            props.checkStrictly
           ></el-cascader>
         </el-form-item>
       </el-form>
@@ -231,6 +231,6 @@ export default {
   margin-top: 15px;
 }
 .el-cascader {
-  width: 100%;
+  width: 30%;
 }
 </style>
