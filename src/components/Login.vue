@@ -3,7 +3,7 @@
     <div class="login_box">
       <!--头像 -->
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt="" />
+        <img src="../assets/logo.png" alt />
       </div>
       <el-form
         ref="loginFormRef"
@@ -14,10 +14,7 @@
       >
         <!--用户名 -->
         <el-form-item label="用户名" prop="username">
-          <el-input
-            v-model="loginForm.username"
-            prefix-icon="iconfont icon-user"
-          ></el-input>
+          <el-input v-model="loginForm.username" prefix-icon="iconfont icon-user"></el-input>
         </el-form-item>
         <!--密码 -->
         <el-form-item label="密码" prop="password">

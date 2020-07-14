@@ -55,7 +55,7 @@
       </el-aside>
       <!--右侧内容 -->
       <el-main>
-      <router-view></router-view>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -72,7 +72,7 @@ export default {
         '103': 'iconfont icon-tijikongjian',
         '101': 'iconfont icon-shangpin',
         '102': 'iconfont icon-danju',
-        '145': 'iconfont icon-baobiao'
+        '145': 'iconfont icon-baobiao',
       },
       //是否折叠
       isCollapse: false,
@@ -82,7 +82,7 @@ export default {
   },
   created() {
     this.getMenuList(),
-    this.activePath = window.sessionStorage.getItem('activePath')
+      (this.activePath = window.sessionStorage.getItem('activePath'))
   },
   methods: {
     logout() {
@@ -101,11 +101,11 @@ export default {
       this.isCollapse = !this.isCollapse
     },
     //保存链接的激活状态
-    saveNavState(activePath){
-      window.sessionStorage.setItem('activePath',activePath)
+    saveNavState(activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="less">
