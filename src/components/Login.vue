@@ -14,7 +14,10 @@
       >
         <!--用户名 -->
         <el-form-item label="用户名" prop="username">
-          <el-input v-model="loginForm.username" prefix-icon="iconfont icon-user"></el-input>
+          <el-input
+            v-model="loginForm.username"
+            prefix-icon="iconfont icon-user"
+          ></el-input>
         </el-form-item>
         <!--密码 -->
         <el-form-item label="密码" prop="password">
@@ -58,10 +61,10 @@ export default {
     login() {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return
-        const { data: res } = await this.$http.post('login', this.loginForm)
-        if (res.meta.status !== 200) return this.$message.error('登录失败！')
+        // const { data: res } = await this.$http.post('login', this.loginForm)
+        // if (res.meta.status !== 200) return this.$message.error('登录失败！')
         this.$message.success('登录成功！')
-        window.sessionStorage.setItem('token', res.data.token)
+        window.sessionStorage.setItem('token', 'shshshshshshsh')
         this.$router.push('/home')
       })
     },

@@ -4,48 +4,48 @@ import VueRouter from 'vue-router'
 const Login = () => import('../components/Login')
 
 // import Home from '../components/Home.vue'
-const Home = () => import('../components/')
+const Home = () => import('../components/Home')
 
 // import Welcome from '../components/Welcome.vue'
-const Welcome = () => import('../components/')
+const Welcome = () => import('../components/Welcome.vue')
 
 // import Users from '../components/user/Users.vue'
-const Users = () => import('../components/')
+const Users = () => import('../components/user/Users.vue')
 
 // import Rights from '../components/power/Rights.vue'
-const Rights = () => import('../components/')
+const Rights = () => import('../components/power/Rights.vue')
 
 // import Roles from '../components/power/Roles.vue'
-const Roles = () => import('../components/')
+const Roles = () => import('../components/power/Roles.vue')
 
 // import Cate from '../components/goods/Cate.vue'
-const Cate = () => import('../components/')
+const Cate = () => import('../components/goods/Cate.vue')
 
 // import Params from '../components/goods/Params.vue'
-const Params = () => import('../components/')
+const Params = () => import('../components/goods/Params.vue')
 
 // import List from '../components/goods/List.vue'
-const List = () => import('../components/')
+const List = () => import('../components/goods/List.vue')
 
 // import Add from '../components/goods/Add.vue'
-const Add = () => import('../components/')
+const Add = () => import('../components/goods/Add.vue')
 
 // import Order from '../components/order/Order.vue'
-const Order = () => import('../components/')
+const Order = () => import('../components/order/Order.vue')
 
 // import Report from '../components/report/Report.vue'
-const Report = () => import('../components/')
+const Report = () => import('../components/report/Report.vue')
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: '/login',
+    redirect: '/login'
   },
   {
     path: '/login',
-    component: Login,
+    component: Login
   },
   {
     path: '/home',
@@ -54,50 +54,50 @@ const routes = [
     children: [
       {
         path: '/welcome',
-        component: Welcome,
+        component: Welcome
       },
       {
         path: '/users',
-        component: Users,
+        component: Users
       },
       {
         path: '/rights',
-        component: Rights,
+        component: Rights
       },
       {
         path: '/roles',
-        component: Roles,
+        component: Roles
       },
       {
         path: '/categories',
-        component: Cate,
+        component: Cate
       },
       {
         path: '/params',
-        component: Params,
+        component: Params
       },
       {
         path: '/goods',
-        component: List,
+        component: List
       },
       {
         path: '/goods/add',
-        component: Add,
+        component: Add
       },
       {
         path: '/orders',
-        component: Order,
+        component: Order
       },
       {
         path: '/reports',
-        component: Report,
-      },
-    ],
-  },
+        component: Report
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({
-  routes,
+  routes
 })
 
 //拦截路由导航守卫
